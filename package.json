@@ -1,0 +1,45 @@
+{
+  "name": "sarahah-application",
+  "version": "1.0.0",
+  "description": "An anonymous messaging platform where users can send and receive messages without revealing their identities",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tasbeehismail/Sarah-Application.git"
+  },
+  "keywords": [
+    "mongoose",
+    "sarahah",
+    "nodejs",
+    "express",
+    "error-handling",
+    "sending-emails",
+    "otp",
+    "validation",
+    "jwt",
+    "joi",
+    "middlewares",
+    "auth"
+  ],
+  "author": "Tasbeeh Ismail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tasbeehismail/Sarah-Application/issues"
+  },
+  "homepage": "https://github.com/tasbeehismail/Sarah-Application#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.5",
+    "node": "^22.4.0",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4"
+  }
+}
