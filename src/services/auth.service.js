@@ -3,7 +3,7 @@ import AppError from '../utils/appError.js';
 
 export const generateToken = (user) => {
     return jwt.sign(
-      { name: user.name, userId: user._id, role: user.role, email: user.email },
+      { username: user.username, id: user._id, email: user.email },
       process.env.JWT_SECRET,
       { expiresIn: '1d' }
     );
