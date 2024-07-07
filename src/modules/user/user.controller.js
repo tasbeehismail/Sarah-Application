@@ -24,7 +24,9 @@ export const login = async (req, res, next) => {
     if (!user || !bcrypt.compareSync(password, user.password)) {
         return next(new AppError('Invalid email or password', 401));
     }
-
+    if (!user.confirmEmail) {
+        return res.status(403).json({ message: 'Email not verified. Please verify your email first.' });
+    }
     const token = generateToken(user);
     return res.status(200).json({ message: 'User logged in successfully', Token: token });
 }
