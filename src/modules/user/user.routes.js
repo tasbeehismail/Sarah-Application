@@ -7,5 +7,6 @@ const router = Router();
 
 router.post('/signup', asyncHandler(checkEmail), asyncHandler(userController.signup));
 router.post('/login', asyncHandler(userController.login));
+router.put('/verify-email', asyncHandler(userController.verifyEmail))
 
 export default router;
