@@ -1,5 +1,6 @@
 import { Router } from "express";
 import * as messageController from '../message/message.controller.js';
+import asyncHandler from "../../utils/asyncHandler.js";
 
 const router = Router();
 
