@@ -1,5 +1,4 @@
 # Sarahah Application
-Sarahah Application is an anonymous messaging platform where users can send and receive messages without revealing their identities.
 
 ## Features
 
