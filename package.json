@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "An anonymous messaging platform where users can send and receive messages without revealing their identities",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
