@@ -1,16 +1,19 @@
 import { Router } from "express";
 import * as messageController from '../message/message.controller.js';
 import asyncHandler from "../../utils/asyncHandler.js";
+import { verifyToken as authenticate } from "../../services/auth.service.js";
+import { schema } from "../../validation/message.js"
+import { validate } from "../../services/validator.service.js";
 
 const router = Router();
 
-router.route('/')
-    .post(asyncHandler(messageController.sendMessage)) 
-    .get(asyncHandler(messageController.readMessages));
+router.get('/', authenticate, asyncHandler(messageController.readMessages));
+
+router.post('/:receiver', validate(schema), asyncHandler(messageController.sendMessage))
 
 router.route('/:message_id')
+    .all(authenticate)
     .get(asyncHandler(messageController.readMessage))
-    .patch(asyncHandler(messageController.updateMessage))
     .delete(asyncHandler(messageController.deleteMessage));
     
 export default router;
